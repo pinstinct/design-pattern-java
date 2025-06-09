@@ -5,16 +5,18 @@ package dev.limhm.middleware;
  */
 public abstract class Middleware {
 
-  private Middleware next;
+  private Middleware next;  // 포인터 역할
 
   /**
    * Builds chains of middleware objects.
+   * <p>
+   * {@code ...}: 가변인자를 의미하며 {@code Middleware[]} 형태로 받는다.
    */
   public static Middleware link(Middleware first, Middleware... chain) {
     Middleware head = first;
     for (Middleware nextInChain : chain) {
-      head.next = nextInChain;
-      head = nextInChain;
+      head.next = nextInChain;  // next 필드에 방금 꺼내온 chain 객체 할당
+      head = nextInChain;  // 다음 객체를 연결하기 위해 head 포인터 이동
     }
     return first;
   }
