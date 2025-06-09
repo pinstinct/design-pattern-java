@@ -1,0 +1,15 @@
+subprojects {
+    group = 'dev.limhm'
+    version = '1.0-SNAPSHOT'
+
+    apply plugin: 'java-library'
+
+    repositories {
+        mavenCentral()
+    }
+
+    java {
+        sourceCompatibility = '21'
+        targetCompatibility = '21'
+    }
+}
