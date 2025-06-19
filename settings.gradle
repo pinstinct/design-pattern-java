@@ -1,4 +1,5 @@
 rootProject.name = 'design-pattern-java'
 include 'chain-of-responsibility'
 include 'iterator'
+include 'strategy'
 
