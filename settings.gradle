@@ -3,4 +3,5 @@ include 'chain-of-responsibility'
 include 'iterator'
 include 'strategy'
 include 'observer'
+include 'command'
 
