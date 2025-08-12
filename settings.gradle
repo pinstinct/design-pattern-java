@@ -4,4 +4,5 @@ include 'iterator'
 include 'strategy'
 include 'observer'
 include 'command'
+include 'mediator'
 
